@@ -6,7 +6,7 @@ import { useChat } from '../hooks/useChat';
 
 
 const ChatContainer = () => {
-    const { handleSubmitMessage, messages }: any = useChat([
+    const { handleSubmitMessage, messages, isLoadingResponse }: any = useChat([
         {
             role: 'system',
             content: `Tu eres Martín, el amigo que está pasando por un momento emocionalmente difícil...`,
@@ -17,7 +17,7 @@ const ChatContainer = () => {
     return (
         <div className='chat-container'>
             <Header />
-            <MessageList messages={messages} />
+            <MessageList messages={messages} isLoadingResponse={isLoadingResponse} />
             <MessageInput handleSubmitMessage={handleSubmitMessage} />
         </div>
     )
