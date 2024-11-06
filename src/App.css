@@ -96,6 +96,7 @@
 /* MessageInput */
 
 .message-input {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -145,4 +146,50 @@
 .disabled-send-icon {
   color: var(--disabled-button--);
   cursor: default;
+}
+
+/* DOT LOADING */
+
+.message-input-loading {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(227, 227, 255);
+  animation: blink 1.2s ease-in-out infinite;
+  transform: scale(0);
+
+  & div {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: rgb(165, 165, 255);
+  }
+}
+
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+/* Animations */
+
+@keyframes blink {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
 }

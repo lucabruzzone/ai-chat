@@ -1,13 +1,9 @@
 import { useEffect, useRef } from 'react';
 import '../App.css'
 import Message from './Message'
+import LoadingDot from './LoadingDot';
 
-const messages_default = [
-    { role: 'system', content: 'HellooooooooHellooooooooHelloooooooo!HellooooooooHellooooooooHelloooooooo!HellooooooooHellooooooooHelloooooooo!HellooooooooHellooooooooHelloooooooo!HellooooooooHellooooooooHelloooooooo!' },
-    { role: 'user', content: 'me gustan las aceitunas' },
-]
-
-const MessageList = ({ messages }: any) => {
+const MessageList = ({ messages, isLoadingResponse }: any) => {
 
     const chatContainerRef = useRef<HTMLDivElement>(null);
 
@@ -23,11 +19,10 @@ const MessageList = ({ messages }: any) => {
             className='messages-list'
         >
             <div className='message-list-box'>
-                <Message role={messages_default[0].role} content={messages_default[0].content} />
-                <Message role={messages_default[1].role} content={messages_default[1].content} />
                 {messages?.map((msg: any, index: any) => (
                     <Message key={index} role={msg.role} content={msg.content} />
                 ))}
+                {isLoadingResponse && <LoadingDot />}
             </div>
         </div>
     )

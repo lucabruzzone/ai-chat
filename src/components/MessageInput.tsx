@@ -1,13 +1,14 @@
 import { useState } from 'react';
+
 import '../App.css'
 
-const MessageInput = ({ setMessages }: any) => {
-    const [currentMessage, setCurrentMessage] = useState('');
+const MessageInput = ({ handleSubmitMessage }: any) => {
+    const [input, setInput] = useState('');
     const [enabled, setEnabled] = useState(false);
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         let message = event.target.value;
-        setCurrentMessage(message);
+        setInput(message);
         if (message.trim() !== '') {
             setEnabled(true);
         }
@@ -16,15 +17,19 @@ const MessageInput = ({ setMessages }: any) => {
         }
     };
 
-    const handleSubmitMessage = () => {
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
+        console.log('holi');
+
         if (enabled) {
-            const messaje_body = { role: 'user', content: currentMessage };
-            setMessages((prevMessages: any) => [...prevMessages, messaje_body]);
-            setCurrentMessage('');
+            console.log('holi2');
+
+            handleSubmitMessage(input)
+            setInput('');
             setEnabled(false);
         }
         else {
-            setCurrentMessage('');
+            setInput('');
             setEnabled(false);
         }
     };
@@ -34,12 +39,12 @@ const MessageInput = ({ setMessages }: any) => {
             <div className='message-input-box'>
                 <input
                     onChange={handleInputChange}
-                    onKeyDown={(e) => { if (e.key === 'Enter') handleSubmitMessage() }}
-                    value={currentMessage}
+                    onKeyDown={(e) => { if (e.key === 'Enter') handleSubmit(e) }}
+                    value={input}
                     type="text"
                     className="styled-input"
                     placeholder="Escribe aquí..." />
-                <div className='input-send-container' onClick={handleSubmitMessage}>
+                <div className='input-send-container' onClick={(e) => handleSubmit(e)}>
                     <span className={`material-icons ${enabled ? 'enabled-send-icon' : 'disabled-send-icon'}`}>
                         send
                     </span>
