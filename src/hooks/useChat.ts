@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import axios from 'axios';
 
+const apiUrl = import.meta.env.VITE_API_URL || '';
+
 export const useChat = (initialMessages: any) => {
     const [messages, setMessages] = useState(initialMessages);
     const [isLoadingResponse, setIsLoadingResponse] = useState(false);
@@ -14,7 +16,7 @@ export const useChat = (initialMessages: any) => {
         try {
             setIsLoadingResponse(true);
             const res = await axios.post(
-                'http://localhost:5000/api/chat',
+                `${apiUrl}/api/chat`,
                 { messages: updatedMessages }
             );
 
