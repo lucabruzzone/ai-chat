@@ -9,7 +9,7 @@ const ChatContainer = () => {
     const { handleSubmitMessage, messages, isLoadingResponse }: any = useChat([
         {
             role: 'system',
-            content: `Tu eres Martín, el amigo que está pasando por un momento emocionalmente difícil...`,
+            content: `Hola amigo, soy un bot que te ayudará a responder tus preguntas. ¿En qué puedo ayudarte hoy?`,
             id: crypto.randomUUID(),
         },
     ]);
