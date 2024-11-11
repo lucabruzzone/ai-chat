@@ -3,13 +3,19 @@ import axios from 'axios';
 
 const apiUrl = import.meta.env.VITE_API_URL || '';
 
+interface ChatMessage {
+    role: string;
+    content: string;
+    id: string;
+}
+
 export const useChat = (initialMessages: any) => {
     const [messages, setMessages] = useState(initialMessages);
     const [isLoadingResponse, setIsLoadingResponse] = useState(false);
 
     const handleSubmitMessage = async (input: any) => {
-        const userMessage = { role: 'user', content: input, id: crypto.randomUUID() };
-        const updatedMessages = [...messages, userMessage];
+        const userMessage: ChatMessage = { role: 'user', content: input, id: crypto.randomUUID() };
+        const updatedMessages: ChatMessage[] = [...messages, userMessage];
         setMessages(updatedMessages);
 
         let aiResponse = '';
@@ -17,7 +23,7 @@ export const useChat = (initialMessages: any) => {
             setIsLoadingResponse(true);
             const res = await axios.post(
                 `${apiUrl}/api/chat`,
-                { messages: updatedMessages }
+                updatedMessages
             );
 
             if (res && res.data && res.data.content) {
