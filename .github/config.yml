@@ -1,5 +1,0 @@
-blank_issues_enabled: false
-pull_request_templates:
-  - name: ✨ Nueva funcionalidad
-    description: Para agregar nuevas features al sistema
-    file: pull_request_feature_template.md
