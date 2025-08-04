@@ -36,6 +36,7 @@
 - [ ] Reemplazo de números y téxtos mágicos por constantes bien nombradas.
 - [ ] Se implementan los principios SOLID.
 - [ ] Los nuevos cambios no afectan negativamente al rendimiento actual (de lo contrario, sugerir mejoras).
+- [ ] No hay logs ni trazas de debug en el código subido.
 
 #### Comentarios y legibilidad
 - [ ] Código comentado con lenguaje apropiado y comprensible.
