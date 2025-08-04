@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+pull_request_templates:
+  - name: ✨ Nueva funcionalidad
+    description: Para agregar nuevas features al sistema
+    file: PULL_REQUEST_TEMPLATE/feature.md
+  - name: 🔥 Hotfix urgente
+    description: Para corregir errores en producción
+    file: PULL_REQUEST_TEMPLATE/hotfix.md
+  - name: ♻️ Refactor de código
+    description: Para mejorar código existente sin cambiar lógica
+    file: PULL_REQUEST_TEMPLATE/refactor.md
+  - name: 🧪 Pruebas automatizadas
+    description: Para agregar o mejorar test coverage
+    file: PULL_REQUEST_TEMPLATE/tests.md
