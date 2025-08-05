@@ -29,19 +29,20 @@
 - [ ] CI/CD aprobado (tests, coverages, linters, etc.)
 
 #### 📐 Calidad del código
-- [ ] Se evita el uso de "var" y se usan variables explícitamente tipadas.
+- [ ] Se implementan los principios SOLID.
+- [ ] El código evita prácticas "code smells" (Revisar artículo Refactoring)
 - [ ] Uso de nombres descriptivos e inequívocos.
 - [ ] Uso de nombres pronunciables y coherentes.
 - [ ] Uso de nombres que permitan búsquedas rápidas y predecibles.
-- [ ] Constantes globales en mayúscula y con SNAKE_CASE.
+- [ ] Constantes en mayúscula y con SNAKE_CASE.
 - [ ] Reemplazo de números y textos mágicos por constantes bien nombradas.
-- [ ] Se implementan los principios SOLID.
+- [ ] Se evita el uso de "var" y en su lugar se usan variables explícitamente tipadas.
 - [ ] Los nuevos cambios no afectan negativamente al rendimiento actual (de lo contrario, sugerir mejoras).
 - [ ] No hay logs ni trazas de debug en el código subido.
 
 #### 💬 Comentarios y legibilidad
-- [ ] Código comentado con lenguaje apropiado y comprensible.
-- [ ] Código comentado solo en áreas no estándar o muy complejas.
+- [ ] Comentarios con lenguaje apropiado y comprensible.
+- [ ] Comentarios solo en áreas no estándar o muy complejas.
 - [ ] Eliminación de comentarios redundantes e irrelevantes.
 - [ ] Se actualiza la documentación si los nuevos cambios lo requieren.
 
