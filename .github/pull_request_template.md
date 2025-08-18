@@ -39,20 +39,12 @@
 - [ ] Código sin **Change Preventers**.
 - [ ] Código sin **Dispensables**.
 - [ ] Código sin **Couplers**.
-- [ ] Uso de nombres descriptivos e inequívocos.
-- [ ] Uso de nombres pronunciables y coherentes.
-- [ ] Uso de nombres que permitan búsquedas rápidas y predecibles.
-- [ ] Constantes en mayúscula y con SNAKE_CASE.
+- [ ] Uso de nombres descriptivos, pronunciables y que permitan búsquedas rápidas y predecibles.
+- [ ] Constantes en mayúscula y SNAKE_CASE.
 - [ ] Reemplazo de números y textos mágicos por constantes bien nombradas.
 - [ ] Código fuertemenete tipado, evitando el uso de "var" y "any"(en Typescript).
 - [ ] Los nuevos cambios no afectan negativamente al rendimiento actual (de lo contrario, sugerir mejoras).
 - [ ] No hay logs ni trazas de debug en el código subido.
-
-#### 💬 Comentarios y legibilidad
-- [ ] Comentarios con lenguaje apropiado y comprensible.
-- [ ] Comentarios solo en áreas no estándar o muy complejas.
-- [ ] Eliminación de comentarios redundantes e irrelevantes.
-- [ ] Se actualiza la documentación si los nuevos cambios lo requieren.
 
 ## 5️⃣ Evidencia
 
