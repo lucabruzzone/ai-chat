@@ -54,6 +54,12 @@
 - [ ] Los nuevos cambios no afectan negativamente al rendimiento actual (de lo contrario, sugerir mejoras).
 - [ ] No hay logs ni trazas de debug.
 
+#### 💬 Legibilidad
+- [ ] Comentarios solo en áreas no estándar o muy complejas.
+- [ ] Comentarios con lenguaje apropiado y comprensible.
+- [ ] Sin comentarios redundantes e irrelevantes.
+- [ ] Se actualiza la documentación si los nuevos cambios lo requieren.
+
 ## 5️⃣ Evidencia
 <!-- Capturas de pantalla, videos, logs, resultados de pruebas manuales o automáticas -->
 
