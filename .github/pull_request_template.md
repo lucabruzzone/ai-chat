@@ -29,14 +29,22 @@
 - [ ] CI/CD aprobado (tests, coverages, linters, etc.)
 
 #### 📐 Calidad del código
-- [ ] Se implementan los principios SOLID.
-- [ ] El código evita prácticas "code smells" (Revisar artículo Refactoring)
+- [ ] Se implementan el **Principio de Responsabilidad Única**.
+- [ ] Se implementan el **Principio Abierto/Cerrado**.
+- [ ] Se implementan el **Principio de Sustitución de Liskov**.
+- [ ] Se implementan el **Principio de Segregación de Interfaces**.
+- [ ] Se implementan el **Principio de Inversión de Dependencias**.
+- [ ] Código sin los **Bloaters**.
+- [ ] Código sin **Object-Orientation Abusers**.
+- [ ] Código sin **Change Preventers**.
+- [ ] Código sin **Dispensables**.
+- [ ] Código sin **Couplers**.
 - [ ] Uso de nombres descriptivos e inequívocos.
 - [ ] Uso de nombres pronunciables y coherentes.
 - [ ] Uso de nombres que permitan búsquedas rápidas y predecibles.
 - [ ] Constantes en mayúscula y con SNAKE_CASE.
 - [ ] Reemplazo de números y textos mágicos por constantes bien nombradas.
-- [ ] Se evita el uso de "var" y en su lugar se usan variables explícitamente tipadas.
+- [ ] Código fuertemenete tipado, evitando el uso de "var" y "any"(en Typescript).
 - [ ] Los nuevos cambios no afectan negativamente al rendimiento actual (de lo contrario, sugerir mejoras).
 - [ ] No hay logs ni trazas de debug en el código subido.
 
@@ -45,54 +53,6 @@
 - [ ] Comentarios solo en áreas no estándar o muy complejas.
 - [ ] Eliminación de comentarios redundantes e irrelevantes.
 - [ ] Se actualiza la documentación si los nuevos cambios lo requieren.
-
-## 4️⃣ React (Si aplica)
-
-#### 📦 Estructura y responsabilidades de componentes
-- [ ] Los componentes son funcionales (no clases) y siguen la convención de nombres PascalCase.
-- [ ] Cada componente tiene una única responsabilidad clara.
-- [ ] No se colocó lógica de negocio directamente en componentes visuales (se usaron hooks o funciones externas).
-- [ ] Componentes y funciones están en sus respectivas carpetas (Components, Utils, Views, etc.).
-- [ ] Los componentes son reutilizables y no hay duplicación de lógica innecesaria.
-
-#### 🧠 Manejo de estado y uso de hooks
-- [ ] El estado local se maneja con `useState`, `useReducer` o un sistema global si aplica (Redux, Zustand, Context, etc.).
-- [ ] Se evitaron `useEffect` mal utilizados (sin dependencias, llamadas innecesarias, o lógica repetida).
-- [ ] Se aplicaron `useMemo` y `useCallback` para evitar renders innecesarios en componentes pesados.
-
-#### 🧹 Código limpio, mantenible y tipado
-- [ ] No hay `console.log`, `debugger` ni comentarios de debugging en el código.
-- [ ] Código fuertemente tipado (en TypeScript).
-- [ ] Se minimiza el uso de `any` (en TypeScript).
-- [ ] Código legible, con ternarios simples y buena indentación.
-
-#### ♿ Accesibilidad y semántica
-- [ ] Se usaron etiquetas HTML semánticas (`<button>`, `<section>`, `<header>`, etc.).
-- [ ] Se incluyeron `aria-*` o `role` donde fue necesario (menús, modales, etc.).
-- [ ] Se garantiza que elementos interactivos (botones, inputs, etc.) sean accesibles por teclado.
-
-#### 🎨 Estilos y UI
-- [ ] Se respetaron las guías de diseño del proyecto (colores, espaciado, tipografía, etc.).
-- [ ] No se usaron estilos inline a menos que esté justificado.
-- [ ] Se usó correctamente el sistema de estilos adoptado (CSS Modules, Tailwind, Styled Components, etc.).
-- [ ] El diseño es responsive o adaptable si corresponde.
-
-#### 🚀 Performance y buenas prácticas de renderizado
-- [ ] Se usaron keys únicas y estables en `.map()` (nunca el índice si puede evitarse).
-- [ ] Uso de `lazy`, `Suspense` u optimizaciones similares si se renderiza condicionalmente un componente pesado.
-- [ ] Los eventos (`onClick`, etc.) están definidos fuera del render o memoizados si es costoso.
-
-#### 🌐 Entorno y navegadores
-- [ ] El código fue renderizado y validado en entorno local o staging.
-- [ ] El comportamiento fue probado en al menos **dos navegadores**:
-
-  - [ ] Chrome
-  - [ ] Firefox
-  - [ ] Safari
-  - [ ] Edge
-  - [ ] Brave
-  - [ ] Mobile (iOS / Android)
-
 
 ## 5️⃣ Evidencia
 
