@@ -1,58 +1,66 @@
 ## 1️⃣ Descripción
 
-<!-- ¿Qué se necesita y por qué? Describa con detalle los cambios que se hicieron. Si es necesario agregue comentarios, notas, etc.  -->
+<!-- ¿Qué se necesita y por qué? Explicación de la solución. Y si es necesario agregue comentarios, notas, etc.  -->
+<!-- Este PR introduce mejoras y nuevos endpoints de prueba en el webhook que recibe la CTE (Carpeta Tributaria Electrónica) desde Datamart. -->
 
 ## 2️⃣ Tipo de cambio
 
-<!-- Marca con "[X]" lo que creas relevante, y el resto bórralo -->
+<!-- Marca con "[X]" lo que corresponda  -->
 
-- [ ] **Fix/Incidencia** (cambio permanente que soluciona un problema)
-- [ ] **Feature** (cambio permanente que añade funcionalidad)
-- [ ] **Cambio disruptivo** (corrección o nueva funcionalidad que provocaría que la actual existente no funcione como se esperaba)
-- [ ] **Refactor** (Refactorización que no compromete el funcionamiento actual)
-- [ ] **Docs** (Documentación de la funcionalidad actual como readme, comentarios, etc.)
-- [ ] **Tests** (Pruebas unitarias o de integración)
+- [ ] **Fix/Incidencia** (soluciona un problema)
+- [ ] **Feature** (añade funcionalidad)
+- [ ] **Cambio disruptivo** (rompe compatibilidad existente)
+- [ ] **Refactor** (mejora interna sin afectar comportamiento)
+- [ ] **Docs** (documentación como README, comentarios, etc.)
+- [ ] **Tests** (pruebas unitarias o de integración)
 
-## 3️⃣ Checklist General
+## 3️⃣ Cambios agregados
+<!-- Lista resumida de los cambios en archivos, métodos, funciones o clases -->
+<!-- 
+📄 **Ruta/Archivo.cs**
+- MétodoXYZ: descripción breve del cambio.
+-->
 
-#### ✅ Integridad del Pull Request
-- [ ] Los cambios de este PR no están duplicados en otro PR ya existente.
-- [ ] El PR resuelve por completo el problema o necesidad asociada a la tarea.
-- [ ] No se hicieron refactorizaciones profundas si no se solicitaron.
-- [ ] El PR contiene una cantidad de commits razonables.
-- [ ] La descripción del PR contempla todos los cambios relevantes que se hicieron.
+## 4️⃣ Checklist General
 
-#### 🧪 Validación funcional
-- [ ] El código cumple con la definición funcional
-- [ ] El código pasó las pruebas unitarias en local o staging
-- [ ] El nuevo código no introduce nuevos errores.
+#### ✅ Integridad
+- [ ] No está duplicado en otro PR.
+- [ ] Resuelve completamente la necesidad/tarea asociada.
+- [ ] Sin refactorizaciones profundas si no se solicitaron.
+- [ ] La cantidad de commits es razonable.
+- [ ] La descripción contempla todos los cambios relevantes.
+
+#### 🧪 Validación
+- [ ] Cumple con la definición funcional
+- [ ] Pasó las pruebas unitarias en local o staging
+- [ ] No introduce nuevos errores.
 - [ ] CI/CD aprobado (tests, coverages, linters, etc.)
 
-#### 📐 Calidad del código
-- [ ] Se implementan el **Principio de Responsabilidad Única**.
-- [ ] Se implementan el **Principio Abierto/Cerrado**.
-- [ ] Se implementan el **Principio de Sustitución de Liskov**.
-- [ ] Se implementan el **Principio de Segregación de Interfaces**.
-- [ ] Se implementan el **Principio de Inversión de Dependencias**.
-- [ ] Código sin los **Bloaters**.
-- [ ] Código sin **Object-Orientation Abusers**.
-- [ ] Código sin **Change Preventers**.
-- [ ] Código sin **Dispensables**.
-- [ ] Código sin **Couplers**.
-- [ ] Uso de nombres descriptivos, pronunciables y que permitan búsquedas rápidas y predecibles.
+#### 📐 Calidad
+- [ ] Cumple con el **Principio de Responsabilidad Única**.
+- [ ] Cumple con el **Principio Abierto/Cerrado**.
+- [ ] Cumple con el **Principio de Sustitución de Liskov**.
+- [ ] Cumple con el **Principio de Segregación de Interfaces**.
+- [ ] Cumple con el **Principio de Inversión de Dependencias**.
+- [ ] Libre de **Bloaters**.
+- [ ] Libre d **Object-Orientation Abusers**.
+- [ ] Libre d **Change Preventers**.
+- [ ] Libre d **Dispensables**.
+- [ ] Libre d **Couplers**.
+- [ ] Nombres descriptivos, pronunciables y que permitan búsquedas rápidas y predecibles.
 - [ ] Constantes en mayúscula y SNAKE_CASE.
-- [ ] Reemplazo de números y textos mágicos por constantes bien nombradas.
-- [ ] Código fuertemenete tipado, evitando el uso de "var" y "any"(en Typescript).
+- [ ] Sin números ni textos mágicos.
+- [ ] Código fuertemente tipado (evitar `var` o `any`).
 - [ ] Los nuevos cambios no afectan negativamente al rendimiento actual (de lo contrario, sugerir mejoras).
-- [ ] No hay logs ni trazas de debug en el código subido.
+- [ ] No hay logs ni trazas de debug.
 
-#### 💬 Comentarios y legibilidad
-- [ ] Comentarios con lenguaje apropiado y comprensible.
+#### 💬 Legibilidad
 - [ ] Comentarios solo en áreas no estándar o muy complejas.
-- [ ] Eliminación de comentarios redundantes e irrelevantes.
+- [ ] Comentarios con lenguaje apropiado y comprensible.
+- [ ] Sin comentarios redundantes e irrelevantes.
 - [ ] Se actualiza la documentación si los nuevos cambios lo requieren.
 
-## 4️⃣ React (Si aplica)
+## 5️⃣ React (Si aplica)
 
 #### 📦 Estructura y responsabilidades de componentes
 - [ ] Los componentes son o todos funcionales o todos clases y siguen la convención de nombres **PascalCase**.
@@ -91,11 +99,8 @@
   - [ ] Brave
   - [ ] Mobile (iOS / Android)
 
+## 6️⃣ Evidencia
+<!-- Capturas de pantalla, videos, logs, resultados de pruebas manuales o automáticas -->
 
-## 5️⃣ Evidencia
-
-<!-- Subir capturas de pantalla, logs de ejecución exitosa, resultados de pruebas manuales o automáticas -->
-
-## 6️⃣ Referencias
-
-<!-- Link de la historia de usuario o tarea relacionada -->
+## 7️⃣ Referencias
+<!-- Link a historia de usuario, ticket o tarea relacionada -->
